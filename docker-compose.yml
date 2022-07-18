@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  backend:
+    build: ./mo_technologies
+    command: bash -c "python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - ./mo_technologies/:/mo_technologies
+    ports:
+      - "8000:8000"
